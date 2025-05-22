@@ -13,7 +13,7 @@ const batchSample = t.router({
     }),
 
   getTime: t.procedure.query(async () => {
-    const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+    //const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
     //await sleep(10000);
     return { time: new Date().toISOString() };
@@ -94,7 +94,7 @@ export const appRouter = t.router({
   batchSample: batchSample,
   pokemon: pokemonRouter,
 
-  sampleRoute: t.procedure
+  helloworld: t.procedure
   .input(z.object({ name: z.string() }))
   .query(({ input }) => {
     return {

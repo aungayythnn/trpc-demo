@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function Home() {
   const [name, setName] = useState('World');
-  const helloQuery = trpc.sampleRoute.hello.useQuery({ name });
+  const helloQuery = trpc.helloworld.useQuery({ name });
 
   return (
   <div className="min-h-screen flex items-center justify-center">
